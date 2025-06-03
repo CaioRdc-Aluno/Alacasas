@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../assets/Style/global.css" />
+    <link rel="stylesheet" href="../assets/Style/loginEcadastro.css" />
+  </head>
+  <body>
+    <div class="lado-esquerdo">
+      <a href="landing.html"
+        ><img
+          src="../assets/img/icone-Alacasas-Tbg.png"
+          alt="alacasas"
+          class="icon"
+      /></a>
+      <section class="section">
+        <h1>BEM-VINDO!</h1>
+        <form action="" method="post" class="formulario" id="form">
+          <input type="email" id="email" placeholder="Digite seu email..." />
+          <span class="span-validacao" id="span-email">*esse email já está cadastrado*</span>
+          <input type="password" id="senha" placeholder="Crie uma senha..." />
+          <span class="span-validacao" id="span-senha">*Sue senha deve possuir mais de 8 dígitos*</span
+          >
+          <input type="password" id="conSenha" placeholder="Digite sua senha novamente..." />
+          <span class="span-validacao" id="span-conSenha">*Senha diferente da primeira*</span>
+
+          <button type="submit" class="btn">Cadastrar-se</button>
+          <a href="login.html" class="a-btn">Já tem conta? Clique aqui</a>
+        </form>
+      </section>
+    </div>
+    <script src="../assets/js/cadastro.js"></script>
+  </body>
+</html>

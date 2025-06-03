@@ -1,0 +1,20 @@
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  color: #222222;
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.socialmedia {
+  display: flex;
+  gap: 20px;
+}
+.socialmedia img {
+  width: 40px;
+  height: 40px;
+}
