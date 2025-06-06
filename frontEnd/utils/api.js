@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       try {
-        const res = await fetch('http://localhost:3000/cadastro', {
+        const res = await fetch('http://localhost:3000/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }));
 
           alert('Cadastro realizado com sucesso!');
-          window.location.href = '../pages/index.html'; 
+          window.location.href = '<Caminho da Sua Home>'; 
         } else {
           alert(data.message || 'Erro ao cadastrar');
         }
@@ -72,10 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await res.json();
 
         if (res.ok) {
+          // Salva dados retornados no localStorage
           localStorage.setItem('usuario', JSON.stringify(data));
 
           alert('Login realizado com sucesso!');
-          window.location.href = '../pages/index.html';
+          window.location.href = '<Caminho da Sua Home>';
         } else {
           alert(data.message || 'Email ou senha incorretos');
         }
