@@ -15,17 +15,20 @@
     <a href="landing.html"><img src="../assets/img/icone-Alacasas-Tbg.png" alt="alacasas" class="icon" /></a>
     <section class="section">
       <h1>OLÁ NOVAMENTE!</h1>
-      <form method="post" id="form-login" class="formulario">
 
-        <input type="email" placeholder="Digite seu email..." id="email" required maxlength="15" class="input" />
-
-        <input type="password" placeholder="Digite sua senha..." id="senha" required class="input" />
-
+      <form class="formulario" id="form-login">
+        <div class="inputs">
+          <input type="text" id="loginEmail" placeholder="Digite seu email" class="input" />
+          <p class="required">E-mail Inválido</p>
+        </div>
+        <div class="inputs">
+          <input type="password" id="loginSenha" placeholder="Digite sua senha" class="input" />
+          <p class="required">Senha de 8 digitos</p>
+          <i class="bi bi-eye"></i>
+        </div>
         <button type="submit" class="btn">Entrar</button>
-
-        <a href="cadastro.html" class="a-btn">Não tem uma conta? Clique aqui</a>
-
       </form>
+      <a href="cadastro.html" class="a-btn">Não tem uma conta? Clique aqui</a>
 
     </section>
     <div id="flash-message" class="flash hidden"></div>
