@@ -1,0 +1,15 @@
+mysql -u root -p
+
+-- Criação do banco de dados
+create database alacasas;
+
+use alacasas;
+
+-- Criação da tabela de usuários
+CREATE TABLE usuarios (
+    id int auto_increment primary key,
+    nome varchar(100) not null,
+    email varchar(100) not null unique,
+    senha varchar(255) not null
+);
+

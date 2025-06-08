@@ -30,7 +30,7 @@ if (formCadastro) {
       setTimeout(async () => {
         const loginResponse = await axios.post(`${api}/login`, { email, senha });
         localStorage.setItem('user', JSON.stringify(loginResponse.data.usuario));
-        window.location.href = '../../Home/HomePage.html';
+        window.location.href = '../pages/index.html';
       }, 2000);
 
     } catch (err) {
@@ -52,7 +52,7 @@ if (formLogin) {
     try {
       const res = await axios.post(`${api}/login`, { email, senha });
       localStorage.setItem('user', JSON.stringify(res.data.usuario));
-      window.location.href = '../../Home/HomePage.html';
+      window.location.href = '../pages/index.html';
     } catch (err) {
       const msg = err.response?.data?.mensagem || 'Erro no login';
       showFlashMessage(msg, 'error');
@@ -65,7 +65,7 @@ function logout() {
 
   localStorage.removeItem('user');
   localStorage.removeItem('token');
-  window.location.href = '../Auth/Login/Login.html';
+  window.location.href = '../pages/login.html';
 }
 const logoutButton = document.getElementById('logout-button');
 if (logoutButton) {
@@ -79,7 +79,7 @@ if (userInfo) {
   const emailSpan = document.getElementById('user-email');
   const showName = document.getElementById('user-name');
 
-  if (nomeSpan) nomeSpan.innerHTML = `Seja Bem-Vindo, ${userInfo.nome} Ao <span> Restaurante Fome!! </span>`;
+  if (nomeSpan) nomeSpan.innerHTML = `Seja Bem-Vindo, ${userInfo.nome} a <span> Imobiliária Alacasas! </span>`;
   if (emailSpan) emailSpan.innerHTML = `E-mail: ${userInfo.email}`;
   if (showName) showName.innerHTML =`Nome: ${userInfo.nome}`;
 

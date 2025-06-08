@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="../assets/Style/global.css" />
-    <link rel="stylesheet" href="../assets/Style/loginEcadastro.css" />
+    <link rel="stylesheet" href="../assets/Style/auth.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   </head>
   <body>
     <div class="lado-esquerdo">
@@ -17,18 +18,24 @@
       /></a>
       <section class="section">
         <h1>OLÁ NOVAMENTE!</h1>
-        <form action="/login" class="formulario" id="form-login">
-          <input type="email" placeholder="Digite seu email..."  id="loginEmail" required/>
-          <span class="span-validacao">*...*</span>
-          <input type="password" placeholder="Digite sua senha..." id="loginSenha" required/>
-          <span class="span-validacao">*Senha incorreta*</span>
+        <form method="post" id="form-login" class="formulario">
+
+          <input type="email" placeholder="Digite seu email..."  id="loginEmail" required maxlength="15" class="input"/>
+          <p class="required">E-mail Inválido...</p>
+          
+          <input type="password" placeholder="Digite sua senha..." id="loginSenha" required class="input"/>
+          <p class="required">Senha inválida...</p>
+          <i class="bi bi-eye"></i>
+
 
           <button type="submit" class="btn">Entrar</button>
-          <a href="cadastro.html" class="a-btn"
-            >Não tem uma conta? Clique aqui</a
-          >
+          <a href="cadastro.html" class="a-btn">Não tem uma conta? Clique aqui</a>
+
         </form>
       </section>
     </div>
+    <script src="../assets/js/login.js"></script>
+    <script src="../utils/api.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>
 </html>
