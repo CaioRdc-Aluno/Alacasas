@@ -1,0 +1,195 @@
+#img-destaque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4) 80%,
+      rgba(255, 255, 255, 1)
+    ),
+    url(../img/casa.jpg);
+}
+
+#img-destaque p {
+  font-size: 20px;
+  max-width: 600px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.botoes {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  background-color: rgba(62, 163, 4, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  padding: 12px 25px;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: 0.3s;
+  background-color: #13d460b6;
+  transition: color 0.3s;
+  color: #000000;
+}
+
+.titulo {
+  font-size: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#titulo1 {
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#titulo2 {
+  color: rgb(54, 54, 54);
+}
+
+#titulo3 {
+  color: rgb(54, 54, 54);
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+#descricao {
+  padding: 30px;
+}
+
+#descricao p {
+  margin-top: 20px;
+  color: rgb(53, 53, 53);
+  max-width: 500px;
+}
+
+#sobre {
+  justify-content: space-between;
+  margin-top: 130px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#sobre img {
+  width: 50%;
+}
+
+#linha-v {
+  display: none;
+}
+
+/*Responsividade*/
+
+@media (max-width: 900px) {
+  #img-destaque {
+    height: 75vh;
+  }
+  #sobre {
+    margin-top: 80px;
+  }
+  #sobre img {
+    width: auto;
+    height: 300px;
+  }
+  .titulo {
+    font-size: 40px;
+  }
+  #linha-h {
+    display: none;
+  }
+  #linha-v {
+    display: flex;
+  }
+}
+
+.secao {
+  padding: 30px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.card {
+  width: 21%;
+  height: 50%;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 4px 2px 9px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.precotipo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.cardinfo p {
+  color: rgb(61, 61, 61);
+}
+
+.cardpricebox {
+  background-color: rgb(114, 147, 60);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.cardpricebox p {
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 430px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .card {
+    width: 84%;
+    height: auto;
+  }
+}

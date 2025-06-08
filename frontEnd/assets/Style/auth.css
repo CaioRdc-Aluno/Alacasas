@@ -1,5 +1,17 @@
+:root {
+  --white-card: #f9f9f9;
+  --blue-1: #e4e8ff;
+  --blue-2: #bac7ff;
+  --blue-3: #afbaf4;
+  --blue-4: #a0b5ff;
+  --blue-5: #83a3ff;
+  --blue-6: #007fff;
+}
+
 body {
   display: flex;
+  width: 100vw;
+  height: 100vh;
   flex-direction: row;
   background-image: url("../img/casas.jpg");
   background-position: center;
@@ -12,7 +24,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(7px);
 }
@@ -34,7 +45,14 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
+  width: 100%;
+}
+
+.inputs {
+  position: relative;
+  transition: margin-bottom 0.3s ease;
+  width: 100%;
 }
 
 input {
@@ -42,10 +60,21 @@ input {
   padding: 7px;
   border: 2px solid rgba(33, 99, 0, 0.5);
   border-radius: 6px;
+  outline: 0;
 }
 
-.span-validacao {
-  color: rgba(0, 0, 0, 0.5);
+.bi-eye,
+.bi-eye-slash {
+  position: absolute;
+  right: 0.6rem;
+  font-size: 1.6rem;
+  color: var(--blue-3);
+  cursor: pointer;
+}
+
+.required {
+  margin: 10px 0 0 0.4rem;
+  color: red;
   display: none;
 }
 
@@ -80,21 +109,61 @@ input {
   left: 3px;
 }
 
-.bi-eye,
-.bi-eye-slash {
-    position: absolute;
-    right: .6rem;
-    top: .5rem;
-    font-size: 1.6rem;
-    color: var(--blue-3);
-    cursor: pointer;
+.senha-regras {
+  background-color: white;
+  border-radius: 0.6rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  padding-left: 2rem;
+  font-size: 0.9rem;
+  color: #333;
+  display: none;
 }
 
+.senha-regras.visible {
+    display: block;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.flash {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 250px;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--blue-6);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  animation: slideDown 0.4s ease;
+  text-align: center;
+}
+
+.flash.error {
+  background-color: #ff4d4d;
+}
+
+.flash.success {
+  background-color: #28a745;
+}
+
+.flash.hidden {
+  display: none;
+}
+
+ul {
+  text-align: start;
+  color: rgba(0, 0, 0, 0.8);
+}
 
 .hidden {
     display: none;
 }
-
 
 @media (max-width: 850px) {
   .lado-esquerdo {
