@@ -67,7 +67,7 @@ function logout() {
   localStorage.removeItem('token');
   window.location.href = '../pages/login.html';
 }
-const logoutButton = document.getElementById('logout-button');
+const logoutButton = document.querySelector('.logout-button');
 if (logoutButton) {
   logoutButton.addEventListener('click', logout);
 }
